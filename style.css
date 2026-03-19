@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.main > h1 {
+    color: rgb(100, 100, 100);
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(255, 255, 255);
+    font-size: 55px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.action-cell .save-btn,
+.action-cell .cancel-btn {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.action-cell .save-btn {
+    background-color: #28a745 !important; /* green */
+}
+
+.action-cell .save-btn:hover {
+    background-color: #218838 !important;
+}
+
+.action-cell .cancel-btn {
+    background-color: #6c757d !important; /* gray */
+}
+
+.action-cell .cancel-btn:hover {
+    background-color: #5a6268 !important;
+}
+
+/* spacing between Save and Cancel buttons */
+.action-cell button {
+    margin-right: 5px;
+}
+
+/* ===== Budget Tracker Layout ===== */
+.budget-container {
+    width: 85%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 40px;
+}
+
+.add-budget-container,
+.add-expense-container {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.display-container {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Chart container */
+#chartContainer {
+    max-width: 400px;
+    margin: auto;
+}
+
+/* ===== Mobile Friendly ===== */
+@media (max-width: 768px) {
+    .main { height: auto; padding: 10px; }
+    .budget-container { width: 100%; padding: 15px; }
+    .display-container { width: 100%; margin-top: 20px; }
+    .main > h1 { font-size: 30px; }
+}
+
+/* ===== Remove number input arrows ===== */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield; /* standard property */
+}
